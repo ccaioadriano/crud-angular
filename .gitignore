@@ -1,2 +1,6 @@
 #Ignore as alterações no backend
 /backend
+
+#Ignore .vscode e .editorconfig
+frontend\.editorconfig
+frontend\.vscode
