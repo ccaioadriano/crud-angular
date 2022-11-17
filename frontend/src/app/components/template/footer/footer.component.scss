@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  min-width: 100%;
+  background-color: purple;
+  color: white;
+  align-items: center;
+  position: fixed;
+  bottom: 0;
+  justify-content: center;
+  font-size: 0.7rem;
+}
+
+.footer span {
+  font-weight: 300;
+}
