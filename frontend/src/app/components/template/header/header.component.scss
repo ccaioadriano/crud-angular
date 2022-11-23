@@ -1,17 +1,23 @@
 .header {
   display: flex;
-  min-width: 100%;
-  background-color: purple;
-  color: white;
   align-items: center;
+}
+
+.header a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  color: #333;
+}
+
+.header .logo {
+  max-height: 32px;
 }
 
 .header .title-group {
-  display: flex;
-  cursor: pointer;
-  align-items: center;
+  padding-left: 25px;
 }
 
 .header .title-group i {
-  padding-right: 15px;
+  padding-right: 5px;
 }
