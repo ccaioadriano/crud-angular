@@ -5,17 +5,17 @@ import { ProductCrudComponent } from './views/product-crud/product-crud.componen
 
 const routes: Routes = [
   {
-    path:"",
-    component: HomeComponent
+    path: '',
+    component: HomeComponent,
   },
   {
-    path:"products",
-    component: ProductCrudComponent
-  }
+    path: 'products',
+    component: ProductCrudComponent,
+  },
 ];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
