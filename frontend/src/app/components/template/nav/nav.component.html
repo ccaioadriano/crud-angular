@@ -2,14 +2,14 @@
 
   <mat-sidenav class="sidenav mat-elevation-z4" mode="side" opened fixedInViewport="true" fixedTopGap="64" fixedBottomGap="64">
       <mat-nav-list class="nav-list">
-          <a mat-list-item >
+          <a mat-list-item routerLink="/">
               <i class="material-icons">
                   home
               </i>
               Início
           </a>
 
-          <a mat-list-item>
+          <a mat-list-item routerLink="/products">
               <i class="material-icons">
                   storefront
               </i>
@@ -20,6 +20,6 @@
   </mat-sidenav>
 
   <mat-sidenav-content class="content">
-    <app-home></app-home>
+    <router-outlet></router-outlet>
   </mat-sidenav-content>
 </mat-sidenav-container>
