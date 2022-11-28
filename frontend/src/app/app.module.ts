@@ -25,6 +25,7 @@ import { FormsModule } from '@angular/forms';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
+import { ProductReadComponent } from './components/product/product-read/product-read.component';
 
 
 
@@ -49,6 +50,7 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
     ProductCrudComponent,
     MyForDirective,
     ProductCreateComponent,
+    ProductReadComponent,
   ],
   imports: [
     BrowserModule,

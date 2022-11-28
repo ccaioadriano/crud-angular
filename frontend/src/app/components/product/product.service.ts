@@ -27,4 +27,8 @@ export class ProductService {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
+  listProducts(): Observable<Product[]> {
+    return this.http.get<Product[]>(this.baseUrl);
+  }
+
 }
