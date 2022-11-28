@@ -18,9 +18,25 @@ import { HomeComponent } from './views/home/home.component';
 import { ProductCrudComponent } from './views/product-crud/product-crud.component';
 import { MyForDirective } from './directives/my-for.directive';
 import { ProductCreateComponent } from './components/product/product-create/product-create.component';
-import {MatButtonModule} from '@angular/material/button';
-import {MatSnackBarModule} from '@angular/material/snack-bar'
+import { MatButtonModule } from '@angular/material/button';
+import { MatSnackBarModule } from '@angular/material/snack-bar';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatInputModule } from '@angular/material/input';
+import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
+
+
+
+export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
+  align: "left",
+  allowNegative: false,
+  decimal: ",",
+  precision: 2,
+  prefix: "R$ ",
+  suffix: "",
+  thousands: "."
+};
 
 @NgModule({
   declarations: [
@@ -32,7 +48,7 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     ProductCrudComponent,
     MyForDirective,
-    ProductCreateComponent
+    ProductCreateComponent,
   ],
   imports: [
     BrowserModule,
@@ -45,9 +61,15 @@ import { HttpClientModule } from '@angular/common/http';
     MatCardModule,
     MatButtonModule,
     MatSnackBarModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule,
+    MatFormFieldModule,
+    MatInputModule,
+    CurrencyMaskModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [
+    { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }
+],
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
