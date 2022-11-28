@@ -1,21 +1,31 @@
+import { Product } from './../product.model';
+import { Router } from '@angular/router';
+import { ProductService } from './../product.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-product-create',
   templateUrl: './product-create.component.html',
-  styleUrls: ['./product-create.component.scss']
+  styleUrls: ['./product-create.component.scss'],
 })
 export class ProductCreateComponent implements OnInit {
+  product: Product = {
+    name: 'Produto de Teste Caio',
+    price: 21568.25,
+  };
 
-  propLegal = "qualquer";
+  constructor(private productService: ProductService, private router: Router) {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  createProduct(): void {
+    this.productService.create(this.product).subscribe(() => {
+      this.productService.showMessage('Produto criado!');
+      this.router.navigate(['/products']);
+    })
   }
 
-  fazerAlgo(){
-    console.log('Fazendo algo!!');
+  cancel(): void {
+    this.router.navigate(['/products']);
   }
-
 }
