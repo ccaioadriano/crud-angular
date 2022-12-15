@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 
 import { MatIconModule } from '@angular/material/icon';
@@ -26,7 +26,12 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { CurrencyMaskConfig, CurrencyMaskModule, CURRENCY_MASK_CONFIG } from 'ng2-currency-mask';
 import { ProductReadComponent } from './components/product/product-read/product-read.component';
+import {MatTableModule} from '@angular/material/table';
 
+import localePt from '@angular/common/locales/pt';
+import { registerLocaleData } from '@angular/common';
+
+registerLocaleData(localePt);
 
 
 export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
@@ -67,10 +72,12 @@ export const CustomCurrencyMaskConfig: CurrencyMaskConfig = {
     FormsModule,
     MatFormFieldModule,
     MatInputModule,
-    CurrencyMaskModule
+    CurrencyMaskModule,
+    MatTableModule
   ],
   providers: [
-    { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig }
+    { provide: CURRENCY_MASK_CONFIG, useValue: CustomCurrencyMaskConfig },
+    {provide: LOCALE_ID, useValue:'pt-BR'}
 ],
   bootstrap: [AppComponent],
 })

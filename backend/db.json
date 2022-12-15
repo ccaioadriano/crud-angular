@@ -19,6 +19,31 @@
       "name": "Lapis Preto Básico",
       "price": "1.50",
       "id": 4
+    },
+    {
+      "name": "Garrafa",
+      "price": "25.51",
+      "id": 5
+    },
+    {
+      "name": "Geladeira",
+      "price": 2555,
+      "id": 6
+    },
+    {
+      "name": "TV",
+      "price": 25552.15,
+      "id": 7
+    },
+    {
+      "name": "teste",
+      "price": 251,
+      "id": 8
+    },
+    {
+      "name": "teste",
+      "price": 150,
+      "id": 9
     }
   ]
 }
