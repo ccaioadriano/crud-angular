@@ -17,7 +17,8 @@ describe('ProductReadComponent', () => {
     fixture.detectChanges();
   });
 
-  it('should create', () => {
+  it('Não pode ser criado', () => {
     expect(component).toBeTruthy();
+    expect(component).toThrowError();
   });
 });

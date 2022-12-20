@@ -9,8 +9,7 @@ import { Product } from './product.model';
   providedIn: 'root',
 })
 export class ProductService {
-
-  baseUrl = "http://localhost:3001/products";
+  baseUrl = 'http://localhost:3001/products';
 
   constructor(private http: HttpClient, private snackBar: MatSnackBar) {}
 
@@ -23,12 +22,11 @@ export class ProductService {
     });
   }
 
-  create(product: Product):Observable<Product>{
+  create(product: Product): Observable<Product> {
     return this.http.post<Product>(this.baseUrl, product);
   }
 
   listProducts(): Observable<Product[]> {
     return this.http.get<Product[]>(this.baseUrl);
   }
-
 }
