@@ -16,34 +16,49 @@
       "price": "7520.89"
     },
     {
-      "name": "Lapis Preto Básico",
-      "price": "1.50",
+      "name": "",
+      "price": null,
       "id": 4
     },
     {
-      "name": "Garrafa",
-      "price": "25.51",
+      "name": "",
+      "price": null,
       "id": 5
     },
     {
-      "name": "Geladeira",
-      "price": 2555,
+      "name": "",
+      "price": null,
       "id": 6
     },
     {
-      "name": "TV",
-      "price": 25552.15,
+      "name": "",
+      "price": null,
       "id": 7
     },
     {
-      "name": "teste",
-      "price": 251,
+      "name": "aloo",
+      "price": 151515.11,
       "id": 8
     },
     {
-      "name": "teste",
-      "price": 150,
+      "name": "garrafa de agua",
+      "price": 97,
       "id": 9
+    },
+    {
+      "name": "teste",
+      "price": 0.02,
+      "id": 10
+    },
+    {
+      "name": "teste",
+      "price": 0,
+      "id": 11
+    },
+    {
+      "name": "teste",
+      "price": 0,
+      "id": 12
     }
   ]
 }

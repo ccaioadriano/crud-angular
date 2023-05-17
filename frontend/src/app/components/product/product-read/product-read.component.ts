@@ -19,7 +19,10 @@ export class ProductReadComponent implements OnInit, AfterViewInit {
 
   constructor(private productService: ProductService) {}
 
-  ngAfterViewInit(): void {}
+  ngAfterViewInit(): void {
+    this.paginator._intl.itemsPerPageLabel = 'Itens por página:';
+
+  }
 
   ngOnInit(): void {
     this.productService.listProducts().subscribe((prod) => {

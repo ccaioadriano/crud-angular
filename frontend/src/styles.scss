@@ -8,6 +8,11 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 
 .snack-bar-salved {
-  background-color: rgb(200, 255, 200);
+  background-color: rgb(175, 255, 175);
   color: black;
+}
+
+.snack-bar-error {
+  background-color: rgb(255, 95, 95);
+  color: white;
 }

@@ -19,10 +19,22 @@ export class ProductCreateComponent implements OnInit {
   ngOnInit(): void {}
 
   createProduct(): void {
-    this.productService.create(this.product).subscribe(() => {
-      this.productService.showMessage('Produto criado com sucesso!');
-      this.router.navigate(['/products']);
-    })
+    if (this.product.name != '' && this.product.price != null) {
+      this.productService.create(this.product).subscribe(() => {
+        this.productService.showMessageSuccess('Produto criado com sucesso!');
+        this.router.navigate(['/products']);
+      });
+    }
+
+    if(this.product.name == ''){
+      this.productService.showMessageError('O nome do produto não pode ser vazio.')
+    }
+
+    if(this.product.price == null) {
+      this.productService.showMessageError('O valor do produto não pode ser vazio.')
+    }
+
+
   }
 
   cancel(): void {
